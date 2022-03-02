@@ -1,0 +1,128 @@
+<html>
+<head>
+<title>City Health Office - Counter(Operator)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+
+table {
+    font-family: Century Gothic;
+	font-size: 20px;
+    border-collapse: collapse;
+    width: fixed;
+	height: fixed;	
+}
+
+td, th {
+    border: 7px ridge #000000;
+    text-align: center;
+    padding: fixed;
+	background-color: #08DDE0;
+	table-layout: auto;
+    width: 360px; 
+    min-height: auto;	
+	min-width: auto;
+}
+
+button {
+	background:#180AA5;
+	color: white;
+	border:auto solid;
+	font-family: Trebuchet MS;
+	font-size:25px;
+	margin: auto;
+	padding: auto;
+	min-width: 75%;
+	min-height:10%;	
+    
+	
+}
+input {
+	background:#2E36DE;
+	color: white;
+	border:auto solid;
+	font-family:Arial;
+	font-size:20px;
+	margin: auto;
+	padding: auto;
+	min-width: 10%;
+	min-height:5%;  
+    
+	
+}
+img {
+	height:150px;
+	width:225px;
+}
+</style>
+</head>
+<body bgcolor="#31E509">
+<center>
+ <font size="5"><img src="cdo_seal.png"></img>
+<img src="doh.png"></img>
+<img src="philhealth.png"></img>
+<img src="cho.png"></img></br>
+
+        
+</center>	  
+<center>
+   <h1 style="font-family:Tahoma">Service Queue Management System</h1>
+</center>
+
+<center>
+<table bgcolor="white" border="10">
+  <tr>
+     <th><h2 style="font-family:Tahoma">Select a Counter</h2></th>
+  </tr>
+  <tr>
+  <td>
+	 <form method="post" >
+	<input type="submit" formaction="c1_control.php" value="C1" name="medical" style="width:75px;height:75px" style="font-family:Arial" onclick="C1()">
+	 
+   
+	
+	<input type="submit" formaction="c2_control.php" value="C2" name="dental" style="width:75px;height:75px" style="font-family:Arial" onclick="C2()">
+	
+	
+	
+	<input type="submit" formaction="c3_control.php" value="C3" name="pharmacy" style="width:75px;height:75px" style="font-family:Arial" onclick="C3()">
+	 
+	 
+	
+	<input type="submit" formaction="c4_control.php" value="C4" name="dogbite" style="width:75px;height:75px" style="font-family:Arial" onclick="C4()">
+	</form>
+  </td>		
+  </tr>
+</table>		
+</center>
+
+
+
+
+
+<script>
+
+    function C1) {
+	window.location.href = 'http://localhost/City%20Health%20Office%2/md.php';
+	}
+	
+	function C2() {
+	window.location.href = 'http://localhost/City%20Health%20Office%2/dnt.php';
+	}
+	
+	function C3() {
+	window.location.href = 'http://localhost/City%20Health%20Office%2/ph.php';
+	}
+	
+	function C4() {
+	window.location.href = 'http://localhost/City%20Health%20Office%2/db.php';
+	}
+	
+	
+	
+	
+    
+</script>   
+
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<html>
+<style>
+body {
+  background-color: #1D1F20;
+}
+
+.american-flag {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 260px;
+  width: 450px;
+  background-color: #B22234;
+}
+
+.american-flag::after {
+  content: '';
+  top: 20px;
+  height: 20px;
+  width: 450px;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 40px 0 0 white,
+    0 80px 0 0 white,
+    0 120px 0 0 white,
+    0 160px 0 0 white,
+    0 200px 0 0 white;
+}
+
+.american-flag::before {
+  content: '★ ★ ★ ★ ★ ★ \b\ \00a0 \00a0 ★ ★ ★ ★ ★ \b\ ★ ★ ★ ★ ★ ★ \b\ \00a0 \00a0 ★ ★ ★ ★ ★ \b\ ★ ★ ★ ★ ★ ★ \00a0 \00a0 ★ ★ ★ ★ ★ \b\ ★ ★ ★ ★ ★ ★ \00a0 \00a0 ★ ★ ★ ★ ★ \b\ ★ ★ ★ ★ ★ ★';
+  font-size: 16px;
+  padding: 12px 0 0 14px;
+  letter-spacing: 4px;
+  line-height: 13px;
+  color: white;
+  position: absolute;
+  background-color: #3C3B6E;
+  width: 175px;
+  height: 128px;
+  z-index: 1;
+}
+
+@media (max-width: 480px) {
+  .american-flag {
+    height: 130px;
+    width: 225px;
+  }
+  .american-flag::after {
+    top: 10px;
+    height: 10px;
+    width: 225px;
+    box-shadow: 0 20px 0 0 white,
+      0 40px 0 0 white,
+      0 60px 0 0 white,
+      0 80px 0 0 white,
+      0 100px 0 0 white;
+  }
+  .american-flag::before {
+    width: 87.5px;
+    height: 64px;
+    font-size: 8px;
+    padding: 3px 0 0 6px;
+    letter-spacing: 2px;
+    line-height: 7px;
+  }
+}
+</style>
+<body>
+<div class="american-flag"></div>
+</body>
+</html>

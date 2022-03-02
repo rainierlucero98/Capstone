@@ -1,0 +1,60 @@
+<html>
+<title> City Health Office - Medical Services</title>
+<head>
+  <?php
+session_start();
+?>
+<body bgcolor="#31E509">
+<center>
+  <p style="font-family:Helvetica"><font size="5"><img src="Logo.png" alt="Logos" width="225" height="125" align="middle" hspace="20"><br>
+                 Republic of the Philippines<br>
+                 Cagayan de Oro City<br>
+				 City Health Office 
+	  </font></p>
+</center>
+<center>
+    <h3 style="font-family:Trebuchet MS">Service Queueing System</h3>
+    <h1 style="font-family:Tahoma">Medical Services Division</h1>
+</center>
+<body>
+  
+  <p align="center" style="font-family:Tahoma" ><font size="5">You are now serving:</font><br></p>
+<?php
+function C1()
+{
+   
+   if(isset($_POST['medical'])){
+            if(!($_SESSION)){ /*-- UNDEFINED INDEX --*/
+                $_SESSION['medical'] = 1;
+            }else{
+                $count = $_SESSION['medical'] + 1;
+				
+                $_SESSION['medical'] = $count;
+            }
+       
+        echo'<center> <span style="font-size:50px">'. $_SESSION['medical'].'</span>';
+		/*-- session <10 ^ --*/
+		echo'<span style="font-size:50px"> of 10 </span></center> ';
+		
+		/*-- if session lapse to more than 10 = automatically restart to 1 --*/
+			
+		} 
+
+		}
+		if(array_key_exists('medical',$_POST)){ 
+C1()
+;
+/* Popup: You are now serving: number of number*/
+  }
+		
+  ?>
+<center> 
+<form action="restart.php"> 
+<input type="button" onClick="history.go(0)" value="Refresh" style="width:60px;height:60px">
+<input type = "submit" value="Reset" style="width:60px;height:60px">
+</form>
+</center>
+  
+</body>
+</html>  
+                                       

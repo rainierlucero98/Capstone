@@ -1,0 +1,52 @@
+<html>
+<title> City Health Office - Medical Services</title>
+<head>
+<?php
+session_start();
+?>
+<body bgcolor="#31E509">
+<center>
+  <p style="font-family:Helvetica"><font size="5"><img src="Logo.png" alt="Logos" width="225" height="125" align="middle" hspace="20"><br>
+                 Republic of the Philippines<br>
+                 Cagayan de Oro City<br>
+				 City Health Office 
+	  </font></p>
+</center>
+<center>
+    <h3 style="font-family:Trebuchet MS">Service Queueing System</h3>
+    <h1 style="font-family:Tahoma">Pharmacy Services Division</h1>
+</center>
+<body>
+  <p align="center" style="font-family:Tahoma" ><font size="5">You are now serving:</font><br></p>
+  <?php
+  
+  function C3()
+{
+   
+   if(isset($_POST['pharmacy'])){
+            if(!($_SESSION)){
+                $_SESSION['pharmacy']=1;
+            }else{
+                $count = $_SESSION['pharmacy'] + 1;
+                $_SESSION['pharmacy'] = $count;
+            }
+        echo'<center><span style="font-size:50px">'. $_SESSION['pharmacy'].'</span>';
+		
+		echo'<span style="font-size:50px"> of 10 </span><center>';
+		} 
+
+}
+if(array_key_exists('pharmacy',$_POST)){ 
+C3();
+;
+}
+?>
+<center> 
+<form action="restart.php"> 
+<input type="button" onClick="history.go(0)" value="Refresh" style="width:60px;height:60px">
+<input type = "submit" value="Reset" style="width:60px;height:60px">
+</form>
+</center> 
+</body>
+</html>  
+                                       
